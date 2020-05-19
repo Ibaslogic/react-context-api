@@ -1,13 +1,13 @@
-## React Tutorial – The Beginners Guide to Learning React JS in 2020
+## React Context API Made Simple – The Practical Guide
 
-[To follow this React tutorial](https://ibaslogic.com/blog/react-tutorial-for-beginners/)
+[To follow this React Context API tutorial](https://ibaslogic.com/blog/react-context-api/)
 
-### Clone the starter project
+### Download/Clone this project
 
 You can download or clone this project by running this command from your terminal:
 
 ```
-git clone https://github.com/Ibaslogic/simple-todo-app
+git clone https://github.com/Ibaslogic/react-context-api
 ```
 
 This will create a directory in the name of the project folder.
