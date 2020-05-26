@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { v4 as uuidv4 } from "uuid";
 
 const TodosContext = React.createContext();
@@ -25,7 +26,6 @@ class MyContext extends Component {
         completed: false,
       },
     ],
-    title: "",
   };
 
   handleChange = (id) => {
@@ -81,8 +81,7 @@ class MyContext extends Component {
           ...this.state,
           handleChange: this.handleChange,
           delTodo: this.delTodo,
-          handleSubmit: this.handleSubmit,
-          onChange: this.onChange,
+          addTodoItem: this.addTodoItem,
         }}
       >
         {this.props.children}

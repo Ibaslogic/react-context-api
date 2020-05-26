@@ -6,6 +6,7 @@ class TodosList extends React.Component {
   static contextType = TodosContext;
   render() {
     const value = this.context;
+
     return (
       <div>
         {value.todos.map((todo) => (

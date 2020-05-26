@@ -1,11 +1,28 @@
-import React, { useContext } from "react";
-
+import React, { useState, useContext } from "react";
 import { TodosContext } from "../context";
 
-const InputTodo = () => {
+const InputTodo = (props) => {
   const value = useContext(TodosContext);
+  const { addTodoItem } = value;
 
-  const { handleSubmit, onChange, title } = value;
+  const [inputText, setInputText] = useState({
+    title: "",
+  });
+
+  const onChange = (e) => {
+    setInputText({
+      ...inputText,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addTodoItem(inputText.title);
+    setInputText({
+      title: "",
+    });
+  };
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
@@ -13,7 +30,7 @@ const InputTodo = () => {
         type="text"
         className="input-text"
         placeholder="Add todo..."
-        value={title}
+        value={inputText.title}
         name="title"
         onChange={onChange}
       />
@@ -21,4 +38,5 @@ const InputTodo = () => {
     </form>
   );
 };
+
 export default InputTodo;
